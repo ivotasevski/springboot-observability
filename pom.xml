@@ -23,5 +23,15 @@
 		<loki.logpack.appender>1.4.1</loki.logpack.appender>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.github.loki4j</groupId>
+				<artifactId>loki-logback-appender</artifactId>
+				<version>${loki.logpack.appender}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 
 </project>

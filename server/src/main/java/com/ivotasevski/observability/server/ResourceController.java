@@ -15,17 +15,17 @@ class ResourceController {
 
     @GetMapping("/resource/small/{id}")
     String resource(@PathVariable("id") String resourceId) {
-        log.info("Handling '/resource/small/{id}'", resourceId);
+        log.info("Handling /resource/small/{id}", resourceId);
         var resource =  resourceService.getResource(resourceId);
-        log.info("Finished handling '/resource/small/{id}'", resourceId);
+        log.info("Finished handling /resource/small/{id}", resourceId);
         return resource;
     }
 
     @GetMapping("/resource/massive/{id}")
     String massiveResource(@PathVariable("id") String resourceId) {
-        log.info("Handling '/resource/massive/{id}'", resourceId);
+        log.info("Handling /resource/massive/{id}", resourceId);
         var resource =  resourceService.getMassiveResource(resourceId);
-        log.info("Finished handling '/resource/massive/{id}'", resourceId);
+        log.info("Finished handling /resource/massive/{id}", resourceId);
         return resource;
     }
 }
