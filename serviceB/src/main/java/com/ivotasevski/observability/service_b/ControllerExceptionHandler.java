@@ -1,4 +1,4 @@
-package com.ivotasevski.observability.server;
+package com.ivotasevski.observability.service_b;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

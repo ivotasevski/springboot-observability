@@ -1,4 +1,4 @@
-package com.ivotasevski.observability.server;
+package com.ivotasevski.observability.service_b;
 
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.aop.ObservedAspect;

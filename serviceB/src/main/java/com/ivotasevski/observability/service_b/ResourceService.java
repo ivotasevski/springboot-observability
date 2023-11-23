@@ -1,6 +1,5 @@
-package com.ivotasevski.observability.server;
+package com.ivotasevski.observability.service_b;
 
-import io.micrometer.observation.annotation.Observed;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,13 +12,13 @@ import java.util.UUID;
 class ResourceService {
     private final Random random = new Random();
 
-    // Example of using an annotation to observe methods
-    // <small.resource> will be used as a metric name
-    // <getting-small-resource> will be used as a span  name
-    // <resourceType=SMALL> will be set as a tag for both metric & span
-    @Observed(name = "small.resource",
-            contextualName = "getting-small-resource",
-            lowCardinalityKeyValues = {"resourceType", "SMALL"})
+//    // Example of using an annotation to observe methods
+//    // <small.resource> will be used as a metric name
+//    // <getting-small-resource> will be used as a span  name
+//    // <resourceType=SMALL> will be set as a tag for both metric & span
+//    @Observed(name = "small.resource",
+//            contextualName = "getting-small-resource",
+//            lowCardinalityKeyValues = {"resourceType", "SMALL"})
     @SneakyThrows
     public String getResource(String resourceId) {
         log.info("Getting resource with id '{}'", resourceId);
@@ -33,7 +32,7 @@ class ResourceService {
     }
 
     @SneakyThrows
-    @Observed
+//    @Observed
     public String getMassiveResource(String resourceId) {
         log.info("Getting massive resource with id '{}'", resourceId);
         byte[] bytes = new byte[1000*1000* random.nextInt(50)];
