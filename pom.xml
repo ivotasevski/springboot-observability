@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.3</version>
+		<version>2.6.15</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ivotasevski.observability</groupId>
@@ -22,14 +22,32 @@
     <properties>
 		<java.version>17</java.version>
 		<loki.logpack.appender>1.4.1</loki.logpack.appender>
+		<spring-cloud.version>2021.0.8</spring-cloud.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
 				<groupId>com.github.loki4j</groupId>
 				<artifactId>loki-logback-appender</artifactId>
 				<version>${loki.logpack.appender}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-tracing-bridge-brave</artifactId>
+				<version>1.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>io.zipkin.reporter2</groupId>
+				<artifactId>zipkin-reporter-brave</artifactId>
+				<version>2.16.4</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
