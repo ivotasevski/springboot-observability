@@ -55,7 +55,7 @@ services:
 
   # The postgres DB is not needed for monitoring tools, but it is here to show DB metrics (Hikari pool)
   observability-demo-postgres:
-    image: postgres:9.5.6-alpine
+    image: postgres:alpine
     container_name: demo-postgres
     environment:
       - POSTGRES_DB=observability_demo
