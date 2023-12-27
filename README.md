@@ -15,6 +15,10 @@ The client is used to generate requests to ServiceA or ServiceB. Itself it not p
 ServiceA calls (http/rest) ServiceB to complete handling of its requests. 
 ServiceB calls DB only (no other service)
 
+## Monitoring/Observability Setup
+
+![](docs/diagram2.drawio.png)
+
 ### Monitoring (Prometheus)
 Micrometer, Spring Actuator and Prometheus are used for monitoring.
 Actuator endpoints are scraped by Prometheus on regular intervals to gain insights of application health.
@@ -24,7 +28,7 @@ Logs are collected and pushed to Grafana Loki. (com.github.loki4j.logback.Loki4j
 
 ### Tracing (Grafana Tempo)
 TraceId and SpanId are added to every log by Spring Cloud Sleuth (today part of Micrometer).
-The logs are then pushed from Grafana Loki to Tempo for analysis (request latency, spans etc.)
+The logs are then pushed to Tempo for analysis (request latency, spans etc.)
 
 ### Visualization (Grafana)
 Grafana is used as a main UI and is common ground for all the tools as it offers tight integration with all of them.
