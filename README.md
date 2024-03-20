@@ -38,8 +38,7 @@ Grafana offers the possibility for creating custom user dashboards, or import ex
 Grafana Loki Query: ``` {app=~".+"} | pattern ` <type> [<app_name>,<trace_id>,<span_id>] <java_class> <_> : <msg>` ```
 
 
-sfdsafsdafsa
- sdff sdfsd
+
 
 
 
