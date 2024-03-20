@@ -35,7 +35,9 @@ Grafana is used as a main UI and is common ground for all the tools as it offers
 Grafana offers the possibility for creating custom user dashboards, or import existing dashboards from its marketplace.
 
 #### Notes:
-Grafana Loki Query: ``` {app=~".+"} | pattern ` <type> [<app_name>,<trace_id>,<span_id>] <java_class> <_> : <msg>` ``` 
+Grafana Loki Query: ``` {app=~".+"} | pattern ` <type> [<app_name>,<trace_id>,<span_id>] <java_class> <_> : <msg>` ```
+
+
 
 
 
